@@ -24,6 +24,10 @@ nav {
 nav h1 {
   font-size: 1.5rem;
 }
+nav h1 a {
+  color: #fff;
+  text-decoration: none;
+}
 
 nav ul {
   list-style: none;
@@ -77,4 +81,186 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 600px) {
+  /* Increase font size for larger screens */
+  nav h1 {
+    font-size: 2rem;
+  }
+
+  section.hero h2 {
+    font-size: 2.5rem;
+  }
+
+  section.hero p {
+    font-size: 1.25rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Additional styles for tablets and larger screens */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  section.hero {
+    text-align: center;
+    padding: 50px;
+  }
+
+  section.hero h2 {
+    font-size: 3rem;
+  }
+
+  section.hero p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Additional styles for desktop screens */
+  main {
+    max-width: 1200px;
+  }
+}
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service {
+  width: calc(33.33% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .service {
+    width: 100%;
+  }
+}
+.service {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.service h4 {
+  margin-bottom: 10px;
+}
+
+.service p {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+  .service {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 768px) {
+  .service {
+    width: calc(33.33% - 20px);
+  }
+}
+
+/* Add the following CSS code for the mobile menu toggle */
+/* Add the following CSS code for the mobile menu toggle */
+
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 5px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links ul li {
+  margin-left: 20px;
+}
+/* Media Query for Mobile Menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 20px;
+  }
+
+  .mobile-menu-toggle.active {
+    background-color: #333;
+  }
+
+  .mobile-menu-toggle span {
+    background-color: #fff;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #1b1a1a;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 60px;
+    right: 20px; /* Adjust this value to control the width */
+    max-width: 200px; /* Add this property to limit the width */
+    width: 100%; /* Set width to 100% to fill the available space */
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 9999;
 }
